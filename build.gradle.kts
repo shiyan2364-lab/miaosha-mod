@@ -1,5 +1,5 @@
 plugins {
-    id("net.fabricmc.fabric-loom") version "0.12-SNAPSHOT"
+    id("net.fabricmc.fabric-loom") version "1.5.4"
     `maven-publish`
 }
 
@@ -13,7 +13,6 @@ dependencies {
     val fabric_api_version: String by project
 
     minecraft("com.mojang:minecraft:$minecraft_version")
-    minecraftName("client")
     modImplementation("net.fabricmc:fabric-loader:$loader_version")
     modImplementation("net.fabricmc.fabric-api:fabric-api:$fabric_api_version")
 }
