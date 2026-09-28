@@ -1,10 +1,14 @@
 plugins {
-    id("net.fabricmc.fabric-loom")
+    id("net.fabricmc.fabric-loom") version "1.6.12"
     `maven-publish`
 }
 
 repositories {
     mavenCentral()
+    maven {
+        name = "Fabric"
+        url = uri("https://maven.fabricmc.net/")
+    }
 }
 
 dependencies {
