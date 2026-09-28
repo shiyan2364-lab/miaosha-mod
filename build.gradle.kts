@@ -1,38 +1,21 @@
 plugins {
-    id("net.fabricmc.fabric-loom") version "1.6.12"
+    id("net.fabricmc.fabric-loom") version "1.17.21"
     `maven-publish`
 }
-
-repositories {
-    mavenCentral()
-    maven {
-        name = "Fabric"
-        url = uri("https://maven.fabricmc.net/")
-    }
-}
-
+repositories { mavenCentral() }
 dependencies {
-    val minecraft_version: String by project
-    val loader_version: String by project
-    val fabric_api_version: String by project
-
-    minecraft("com.mojang:minecraft:$minecraft_version")
-    modImplementation("net.fabricmc:fabric-loader:$loader_version")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:$fabric_api_version")
+    val mc: String by project
+    val ldr: String by project
+    val api: String by project
+    minecraft("com.mojang:minecraft:$mc")
+    modImplementation("net.fabricmc:fabric-loader:$ldr")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:$api")
 }
-
 processResources {
-    val version = project.version
-    inputs.property("version", version)
-    filesMatching("fabric.mod.json") {
-        expand("version" to version)
-    }
+    inputs.property("version", project.version)
+    filesMatching("fabric.mod.json") { expand("version" to project.version) }
 }
-
-tasks.withType<JavaCompile>().configureEach {
-    it.options.release.set(16)
-}
-
+tasks.withType<JavaCompile>().configureEach { options.release.set(16) }
 java {
     sourceCompatibility = JavaVersion.VERSION_16
     targetCompatibility = JavaVersion.VERSION_16
