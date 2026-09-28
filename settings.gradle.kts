@@ -10,12 +10,9 @@ pluginManagement {
     resolutionStrategy {
         eachPlugin {
             if (requested.id.id == "net.fabricmc.fabric-loom") {
-                useModule("net.fabricmc:fabric-loom:${requested.version}")
+                useModule("net.fabricmc:fabric-loom:1.6.12")
             }
         }
-    }
-    plugins {
-        id("net.fabricmc.fabric-loom") version "1.6.12"
     }
 }
 
