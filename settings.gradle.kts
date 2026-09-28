@@ -7,6 +7,9 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+    plugins {
+        id("net.fabricmc.fabric-loom") version providers.gradleProperty("loom_version")
+    }
 }
 
 rootProject.name = "miaosha-mod"
