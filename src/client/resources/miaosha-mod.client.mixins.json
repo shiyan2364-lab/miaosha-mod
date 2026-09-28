@@ -1,0 +1,9 @@
+{
+	"required": true,
+	"package": "com.example.client.mixin",
+	"compatibilityLevel": "JAVA_16",
+	"client": [],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
