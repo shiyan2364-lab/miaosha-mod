@@ -1,15 +1,9 @@
 pluginManagement {
     repositories {
-        maven { url = uri("https://maven.fabricmc.net/") }
+        maven { url = "https://maven.fabricmc.net/" }
         mavenCentral()
         gradlePluginPortal()
     }
-    resolutionStrategy {
-        eachPlugin {
-            if (requested.id.id == "net.fabricmc.fabric-loom") {
-                useModule("net.fabricmc:fabric-loom:1.17.21")
-            }
-        }
-    }
 }
+
 rootProject.name = 'miaosha-mod'
