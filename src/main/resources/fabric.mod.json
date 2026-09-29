@@ -7,10 +7,6 @@
 	"authors": [
 		"Me!"
 	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
 	"license": "CC0-1.0",
 	"environment": "*",
 	"entrypoints": {
@@ -22,11 +18,7 @@
 		]
 	},
 	"mixins": [
-		"miaosha-mod.mixins.json",
-		{
-			"config": "miaosha-mod.client.mixins.json",
-			"environment": "client"
-		}
+		"miaosha-mod.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
