@@ -4,17 +4,22 @@
 	"version": "${version}",
 	"name": "秒杀模组 (MiaoSha Mod)",
 	"description": "玩家攻击任意生物（含 Boss、玩家）一击必杀！[1.16.5]",
-	"authors": ["Me!"],
+	"authors": [
+		"Me!"
+	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/miaosha-mod/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": ["com.example.MiaoShaMod"],
-		"client": ["com.example.client.MiaoShaModClient"]
+		"main": [
+			"com.example.MiaoShaMod"
+		],
+		"client": [
+			"com.example.client.MiaoShaModClient"
+		]
 	},
 	"mixins": [
 		"miaosha-mod.mixins.json",
@@ -24,10 +29,11 @@
 		}
 	],
 	"depends": {
-    "fabricloader": ">=0.15.11",
-    "minecraft": "~1.16.5",
-    "java": ">=8"
-},
-"suggests": {
-    "fabric-api": "*"
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.16.5",
+		"java": ">=8"
+	},
+	"suggests": {
+		"fabric-api": "*"
+	}
 }
