@@ -5,16 +5,13 @@
 	"name": "秒杀模组 (MiaoSha Mod)",
 	"description": "玩家攻击任意生物（含 Boss、玩家）一击必杀！[1.16.5]",
 	"authors": [
-		"Me!"
+		"kl"
 	],
 	"license": "CC0-1.0",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"com.example.MiaoShaMod"
-		],
-		"client": [
-			"com.example.client.MiaoShaModClient"
 		]
 	},
 	"mixins": [
